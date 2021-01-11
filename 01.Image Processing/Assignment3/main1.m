@@ -1,0 +1,20 @@
+%discussion propert 
+clear;
+r = [1  2 3 4 ];
+fr = fft(r);
+frc = conj(fr);
+im = [1i 2i 3i 4i];
+fim = fft(im);
+fimc = conj(fim);
+rem = [2 1 1 1];
+frem = fft(rem);
+rom = [0 -1 0 1];
+from = fft(rom);
+remi = [2i 1i 1i 1i];
+fremi = fft(remi);
+romi = [0 -1i 0 1i];
+fromi = fft(romi);
+rce = [ 2+2i 1+1i 1+1i 1+1i];
+frce = fft(rce);
+rco = [0 1-1i 0 -1+1i];
+frco = fft(rco);

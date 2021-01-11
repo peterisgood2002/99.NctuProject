@@ -1,0 +1,49 @@
+/******************************************
+FILE
+    CallBackFunction.h
+Purpose
+    所有Call back function以及所有Call back function需要用到的函式
+
+NOTE
+	
+
+Author
+    9757553 顏志晟
+*******************************************/
+
+#ifndef _CALL_BACK_FUNC_
+
+#define _CALL_BACK_FUNC_
+
+#include "glut.h"
+#include "OpenGLParameter.h"
+#include "Scene.h"
+
+#ifndef _MODE_
+#define _MODE_
+enum Mode { DEFAULT = 0 ,DLIGHTING ,MIRROR ,INDIRECT };//此程式的相關模式
+#endif
+
+
+/*將model讀入*/
+/*初始化整個OpenGL程式
+  傳入：OpenGL參數和場景
+ */
+void Initialize(int argv ,char** argc ,OpenGLParameter& par ,Scene& scene);
+void setCallBackFunc();
+void display();
+void setPerspectiveView();
+void setModelView();
+void reshape(GLsizei w,GLsizei h); 
+/*接收keyboard資訊 並做出相對應的行為*/
+void keyboard(unsigned char key, int x, int y);
+void specialkey ( int key ,int x ,int y);
+/*接收mouse資訊*/
+void mouse(int button, int state, int x, int y);
+void motion(int x, int y);
+/*Default的輸出 為了確定model是否正確讀入*/
+void defaultDisplay();
+
+
+
+#endif
